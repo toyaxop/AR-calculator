@@ -1,0 +1,106 @@
+body{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #E7C8DD;
+    background-color: #1c1917;
+    text-align: center;
+    text-shadow: 3px 3px 4px #B9929F;
+}
+
+input[type="range"] {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 12px;
+    background: hsla(0, 0%, 87%, 0.25);
+    border-radius: 6px;
+    outline: none;
+    opacity: 0.9;
+    transition: opacity .2s;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    background: #E7C8DD;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background .3s;
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: 24px;
+    height: 24px;
+    background: #E7C8DD;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background .3s;
+}
+
+input[type="range"]:hover {
+    opacity: 1;
+}
+
+input[type="range"]:focus::-webkit-slider-thumb {
+    background: hsl(321, 40%, 65%);
+}
+
+input[type="range"]:focus::-moz-range-thumb {
+    background: hsl(321, 40%, 65%);
+}
+
+h1:hover{
+    animation: rotate .75s ease infinite
+}
+
+button {
+    font-size: 20px;
+    color: #E7C8DD;
+    text-shadow: 3px 3px 2px #e7c8dd71;
+    text-align: center;
+    text-decoration: none;
+    background-color: #694894;
+    border-radius: 15px; 
+    box-shadow: 4px 4px 2px #69489480;
+    transition: transform 0.5s, background-color 0.5s, text-shadow 0.5s, text-decoration 0.5s, box-shadow 0.5s;
+    transform: scale(1, 1);
+    margin-top: 15px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%; /* Default width */
+}
+
+button:hover{
+    background-color: #69489480;
+    text-shadow: none;
+    text-decoration: underline #e2c2c665;
+    box-shadow: none;
+    animation: rotate 1.5s ease infinite;
+}
+
+@keyframes rotate{
+    0% {
+        transform: rotate(1deg);
+    } 
+
+    50%{
+        transform: rotate(-1deg);
+    }
+
+    100% {
+        transform: rotate(1deg);
+    }
+}
+
+@media (min-width: 768px){
+    input[type="range"] {
+        width: 65%;
+    }
+    button{
+        width:20%
+    }
+}

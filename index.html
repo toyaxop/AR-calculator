@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="js.js"></script>
+    <title>Lucia's AR Calculator</title>
+</head>
+<body>
+    <h1>Calculateur d'AR</h1>
+    <p>(j'm'ennuyais mdr)</p>
+    <br>
+    <label class="slider" for="startRank">Start Rank: <span id="startRankValue">1</span></label><br>
+    <input type="range" id="startRank" min="1" max="59" value="1" oninput="updateStartValue()"><br><br>
+    <label class="slider" for="endRank">End Rank: <span id="endRankValue">1</span></label><br>
+    <input type="range" id="endRank" min="1" max="59" value="1" oninput="updateEndValue()"><br><br>
+    <button onclick="calculateExperience()">Calculate</button>
+    <p id="result"></p>
+</body>
+</html>
