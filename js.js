@@ -94,9 +94,12 @@ function calculateExperience() {
         totalExperience += adventureRankTable[i];
     }
 
-    totalExperience -= currentXp;
-
-    document.getElementById('result').innerText = `The XP needed to go from rank ${startRank} with ${currentXp} to rank ${endRank} is ${totalExperience} EXP.`;
+    if(isNaN(currentXp)){
+        document.getElementById('result').innerText = `The XP needed to go from rank ${startRank} to rank ${endRank} is ${totalExperience} EXP.`;
+    } else{
+        totalExperience -= currentXp;
+        document.getElementById('result').innerText = `The XP needed to go from rank ${startRank} with ${currentXp} EXP to rank ${endRank} is ${totalExperience} EXP.`;
+    }
 }
 
 // Initialize displayed slider values
