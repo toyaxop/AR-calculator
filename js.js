@@ -87,13 +87,16 @@ function updateEndValue() {
 function calculateExperience() {
     const startRank = parseInt(document.getElementById('startRank').value);
     const endRank = parseInt(document.getElementById('endRank').value);
+    const currentXp = parseInt(document.getElementById('currentXP').value);
     let totalExperience = 0;
 
-    for (let i = startRank; i <= endRank; i++) {
+    for (let i = startRank; i < endRank; i++) {
         totalExperience += adventureRankTable[i];
     }
 
-    document.getElementById('result').innerText = `L'XP nécessaire pour passer du rang ${startRank} au rang ${endRank+1} est de ${totalExperience}`;
+    totalExperience -= currentXp;
+
+    document.getElementById('result').innerText = `The XP needed to go from rank ${startRank} with ${currentXp} to rank ${endRank} is ${totalExperience} EXP.`;
 }
 
 // Initialize displayed slider values

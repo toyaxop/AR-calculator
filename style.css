@@ -82,6 +82,11 @@ button:hover{
     animation: rotate 1.5s ease infinite;
 }
 
+#currentXP{
+    background-color: hsla(0, 0%, 87%, 0.25);
+    color:#E7C8DD
+}
+
 @keyframes rotate{
     0% {
         transform: rotate(1deg);

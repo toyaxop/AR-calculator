@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,13 +8,15 @@
     <title>Lucia's AR Calculator</title>
 </head>
 <body>
-    <h1>Calculateur d'AR</h1>
-    <p>(j'm'ennuyais mdr)</p>
+    <h1 data-translate="title">AR Calculator</h1>
+    <p data-translate="subtitle">(I was bored lol)</p>
     <br>
-    <label class="slider" for="startRank">Rang de départ: <span id="startRankValue">1</span></label><br>
+    <label class="slider" for="startRank">Starting Rank: <span id="startRankValue">1</span></label><br>
     <input type="range" id="startRank" min="1" max="59" value="1" oninput="updateStartValue()"><br><br>
-    <label class="slider" for="endRank">Rang visé: <span id="endRankValue">1</span></label><br>
-    <input type="range" id="endRank" min="1" max="59" value="1" oninput="updateEndValue()"><br><br>
+    <label class="slider" for="endRank">Target Rank: <span id="endRankValue">2</span></label><br>
+    <input type="range" id="endRank" min="2" max="60" value="2" oninput="updateEndValue()"><br><br>
+    <label>Current experience: </label><br>
+    <input type="number" id="currentXP" min="0"><br><br>
     <button onclick="calculateExperience()">Calculate</button>
     <p id="result"></p>
 </body>
